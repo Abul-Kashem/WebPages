@@ -1,0 +1,22 @@
+create table categories
+(
+	category_id int auto_increment primary key,
+	name varchar(255)
+    
+)
+INSERT INTO `categories`( `name`) VALUES ('News');
+INSERT INTO `categories`( `name`) VALUES ('Events');
+INSERT INTO `categories`( `name`) VALUES ('Tutorials');
+INSERT INTO `categories`( `name`) VALUES ('Misc');
+create table posts
+(
+	post_id int auto_increment primary key,
+	category int,
+	title varchar(255),
+	body text,
+	author varchar(255),
+	tags varchar(255),
+	date timestamp default current_timestamp 
+    
+)
+INSERT INTO `posts`( `category`, `title`, `body`, `author`, `tags`, `date`) VALUES (1,'C# DataGridview','<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ab impedit est, suscipit cumque quis corporis deserunt veniam esse asperiores eligendi nemo velit accusantium nam eaque recusandae voluptatem adipisci debitis cum facere! In atque et quam officiis deleniti alias minus illo optio sit! Ullam at veniam, temporibus earum culpa quos voluptates incidunt autem quas. Maxime, eius eum corporis, dolorum, modi perferendis voluptas aspernatur tenetur ducimus at tempora numquam rem dignissimos eligendi, ab. Enim accusamus ipsam dignissimos, repellat dolorum quis aliquid rerum nostrum incidunt necessitatibus dolorem, commodi explicabo quos sit saepe aut consectetur odio, ut cupiditate quia. Minima tempore odio tempora maxime enim repellat maiores omnis, labore a repudiandae adipisci quisquam nesciunt veniam, soluta ea! Cupiditate laudantium, vitae corrupti sequi nesciunt debitis, obcaecati quam architecto officiis dignissimos amet quidem possimus vel excepturi quibusdam quia. Est facere asperiores cum ab quos sunt delectus reprehenderit, temporibus ullam culpa error, necessitatibus iure beatae, exercitationem.</p>','kashem','.Net C#, Datagridview','January 1, 2014')
